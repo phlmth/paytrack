@@ -39,8 +39,8 @@
     }
   },
 
-  "postCreateCommand": "chmod +x mvnw && make env && ./mvnw -q -DskipTests dependency:go-offline",
-
+  "postCreateCommand": "chmod +x mvnw && git lfs install && make env && ./mvnw -q -DskipTests dependency:go-offline",
+  
   "postStartCommand": "make db-up",
 
   "remoteUser": "vscode"

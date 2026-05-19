@@ -9,6 +9,7 @@ RUN apt-get update \
         bash \
         curl \
         git \
+        git-lfs \
         make \
         sudo \
         unzip \
