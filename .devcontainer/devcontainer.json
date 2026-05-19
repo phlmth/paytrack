@@ -39,7 +39,7 @@
     }
   },
 
-  "postCreateCommand": "chmod +x mvnw && git lfs install && make env && ./mvnw -q -DskipTests dependency:go-offline",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
   
   "postStartCommand": "make db-up",
 
