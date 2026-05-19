@@ -5,11 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PaytackApplication {
+public class PaytrackApplication {
 
   public static void main(String[] args) {
     Dotenv.configure().ignoreIfMissing().systemProperties().load();
 
-    SpringApplication.run(PaytackApplication.class, args);
+    SpringApplication.run(PaytrackApplication.class, args);
   }
 }
