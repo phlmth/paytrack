@@ -1,4 +1,4 @@
-package thaumazein.paytack;
+package thaumazein.paytrack;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.boot.SpringApplication;

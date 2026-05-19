@@ -1,0 +1,10 @@
+CREATE TABLE categories (
+    id BIGINT NOT NULL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT chk_categories_name_not_blank CHECK (length(trim(name)) > 0)
+);
+
+CREATE UNIQUE INDEX idx_categories_normalized ON categories (lower(trim(name)));
