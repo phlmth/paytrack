@@ -70,6 +70,44 @@ Swagger UI:
 http://localhost:8080/swagger-ui/index.html
 ```
 
+## GitHub Codespaces
+
+This project includes a Dev Container configuration for GitHub Codespaces.
+
+The Codespace environment provides:
+
+- Eclipse Temurin 21
+- Java and Spring extensions for VS Code
+- Docker support for PostgreSQL
+- Maven Wrapper support
+- Automatic `.env` creation from `.env.example`
+- Automatic PostgreSQL startup
+
+To use it:
+
+1. Open the repository on GitHub.
+2. Click `Code`.
+3. Open the `Codespaces` tab.
+4. Create a new codespace.
+5. Run:
+
+```bash
+make validate
+make run
+```
+
+Check the Java version:
+```bash
+java -version
+```
+
+Expected result:
+```bash
+openjdk version "21.x.x" ... LTS
+OpenJDK Runtime Environment Temurin-21.x.x+...
+OpenJDK 64-Bit Server VM Temurin-21.x.x+...
+```
+
 ## Environment
 
 Use `.env.example` as reference.
@@ -124,16 +162,6 @@ make validate      # format and validate the project
 * [ ] `GET /reports/balance`
 * [ ] `GET /reports/statement?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD`
 
-## Branch Plan
-
-* [ ] `category-crud`
-* [ ] `transaction-crud`
-* [ ] `balance-and-statement-reports`
-* [ ] `global-error-handling`
-* [ ] `swagger-and-readme-documentation`
-* [ ] `ci-and-engineering-hygiene`
-* [ ] `test-hardening`
-* [ ] `pagination`
 
 ## Delivery Checklist
 
