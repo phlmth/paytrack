@@ -1,6 +1,7 @@
 package thaumazein.paytrack.category;
 
 import jakarta.transaction.Transactional;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import thaumazein.paytrack.category.dto.CategoryResponse;
@@ -28,5 +29,9 @@ public class CategoryService {
     Category savedCategory = categoryRepository.save(category);
 
     return categoryMapper.toResponse(savedCategory);
+  }
+
+  public List<CategoryResponse> getCategories() {
+    return categoryRepository.findAll().stream().map(categoryMapper::toResponse).toList();
   }
 }
